@@ -21,7 +21,7 @@ public class UserRegistration {
 		String email = sc.next();
 		String mobileNumPattern = "^(91)[ ]{1}[6-9]{1}[0-9]{9}$";
 		String mobileNum = "91 8421241594";
-		String passwordPattern = "((?=.*[A-Z])(?=.*[0-9]).{8,})"; //. means exactly one and anywhere in the string
+		String passwordPattern = "((?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%*]).{8,})"; //. means exactly one and anywhere in the string
 		System.out.println("Enter Password: ");
 		String password = sc.next();
 		System.out.println("FirstName valid? " + isValid(firstNamePattern, firstName));
