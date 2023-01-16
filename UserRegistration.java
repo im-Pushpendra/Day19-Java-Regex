@@ -19,9 +19,12 @@ public class UserRegistration {
 		String emailPattern = "^[a-zA-Z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-zA-Z]{2})*$";
 		System.out.println("Enter User EmailId:");
 		String email =sc.next();
+		String mobileNumPattern = "^(91)[ ]{1}[6-9]{1}[0-9]{9}$";
+	    String mobileNum = "91 8421241594";
 		System.out.println("FirstName valid? " + isValid(firstNamePattern, firstName));
 		System.out.println("LastName valid? " + isValid(firstNamePattern, lastName));
 		System.out.println("Email valid? " + isValid(emailPattern, email));
+		System.out.println(isValid(mobileNumPattern, mobileNum));
 
 	}
 }
