@@ -14,7 +14,10 @@ public class UserRegistration {
 		String firstNamePattern = "^[A-Z]{1}[a-z]{2,}$";
 		System.out.println("Enter User FirstName:");
 		String firstName = sc.next();
-		System.out.println(isValid(firstNamePattern, firstName));
+		System.out.println("Enter User LastName:");
+		String lastName = sc.next();
+		System.out.println("FirstName valid? "+isValid(firstNamePattern, firstName));
+		System.out.println("LastName valid? "+isValid(firstNamePattern, lastName));
 
 		
 
