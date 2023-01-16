@@ -4,10 +4,10 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-	static boolean isValid(String regex, String userInput)
-	{
+	static boolean isValid(String regex, String userInput) {
 		return Pattern.compile(regex).matcher(userInput).matches();
 	}
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to Java Regex Program");
@@ -16,10 +16,12 @@ public class UserRegistration {
 		String firstName = sc.next();
 		System.out.println("Enter User LastName:");
 		String lastName = sc.next();
-		System.out.println("FirstName valid? "+isValid(firstNamePattern, firstName));
-		System.out.println("LastName valid? "+isValid(firstNamePattern, lastName));
-
-		
+		String emailPattern = "^[a-zA-Z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-zA-Z]{2})*$";
+		System.out.println("Enter User EmailId:");
+		String email =sc.next();
+		System.out.println("FirstName valid? " + isValid(firstNamePattern, firstName));
+		System.out.println("LastName valid? " + isValid(firstNamePattern, lastName));
+		System.out.println("Email valid? " + isValid(emailPattern, email));
 
 	}
 }
